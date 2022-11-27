@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.1.1
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Nov 27, 2022 at 01:56 AM
+- Server version: 10.4.22-MariaDB
+- PHP Version: 7.4.27
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="inflatable_innovative_toys" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="customers">
+                CREATE TABLE `customers` (
+                  `customer_id` int(11) NOT NULL AUTO_INCREMENT,
+                  `customer_name` varchar(255) NOT NULL,
+                  `address` varchar(500) NOT NULL,
+                  `city` varchar(255) NOT NULL,
+                  `state` varchar(255) NOT NULL,
+                  `country` varchar(255) NOT NULL,
+                  `pincode` varchar(25) NOT NULL,
+                  `phone` varchar(25) NOT NULL,
+                  `email` varchar(255) NOT NULL,
+                  `website` varchar(255) NOT NULL,
+                  `status` tinyint(4) NOT NULL DEFAULT 1,
+                  `created_date_time` datetime NOT NULL DEFAULT current_timestamp(),
+                  PRIMARY KEY (`customer_id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'inflatable_innovative_toys'
+    -->
+    <database name="inflatable_innovative_toys">
+        <!-- Table customers -->
+        <table name="customers">
+            <column name="customer_id">1</column>
+            <column name="customer_name">Venkat</column>
+            <column name="address">Kukatpally</column>
+            <column name="city">Hyderabad</column>
+            <column name="state">TS</column>
+            <column name="country">India</column>
+            <column name="pincode">500072</column>
+            <column name="phone"></column>
+            <column name="email">venkat@jtnu.com</column>
+            <column name="website">jntu.com</column>
+            <column name="status">1</column>
+            <column name="created_date_time">2022-11-10 00:21:48</column>
+        </table>
+        <table name="customers">
+            <column name="customer_id">2</column>
+            <column name="customer_name">xyz</column>
+            <column name="address">xyz address</column>
+            <column name="city">xyz city</column>
+            <column name="state">TS</column>
+            <column name="country">INDIA</column>
+            <column name="pincode">500068</column>
+            <column name="phone">9876543210</column>
+            <column name="email">xyz@jntu.com</column>
+            <column name="website">jntu.com</column>
+            <column name="status">1</column>
+            <column name="created_date_time">2022-11-10 00:21:48</column>
+        </table>
+        <table name="customers">
+            <column name="customer_id">3</column>
+            <column name="customer_name">abc</column>
+            <column name="address">abc address</column>
+            <column name="city">Hyd</column>
+            <column name="state">TS</column>
+            <column name="country">India</column>
+            <column name="pincode">500056</column>
+            <column name="phone">6598658455</column>
+            <column name="email">abc@hyd.com</column>
+            <column name="website">https://www.hyd.com</column>
+            <column name="status">1</column>
+            <column name="created_date_time">2022-11-10 00:32:51</column>
+        </table>
+    </database>
+</pma_xml_export>

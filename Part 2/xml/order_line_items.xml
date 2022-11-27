@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.1.1
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Nov 27, 2022 at 01:57 AM
+- Server version: 10.4.22-MariaDB
+- PHP Version: 7.4.27
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="inflatable_innovative_toys" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="order_line_items">
+                CREATE TABLE `order_line_items` (
+                  `order_line_item_id` int(11) NOT NULL AUTO_INCREMENT,
+                  `order_id` int(11) NOT NULL,
+                  `product_id` int(11) NOT NULL,
+                  `unit_price` float NOT NULL,
+                  `quantity` smallint(6) NOT NULL,
+                  `discount` float NOT NULL,
+                  `discount_type` varchar(5) NOT NULL,
+                  `amount` float NOT NULL,
+                  `status` tinyint(4) NOT NULL DEFAULT 1,
+                  PRIMARY KEY (`order_line_item_id`),
+                  KEY `product_id` (`product_id`),
+                  KEY `order_id` (`order_id`),
+                  CONSTRAINT `order_line_items_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`),
+                  CONSTRAINT `order_line_items_ibfk_2` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'inflatable_innovative_toys'
+    -->
+    <database name="inflatable_innovative_toys">
+        <!-- Table order_line_items -->
+        <table name="order_line_items">
+            <column name="order_line_item_id">1</column>
+            <column name="order_id">1</column>
+            <column name="product_id">1</column>
+            <column name="unit_price">1000</column>
+            <column name="quantity">1</column>
+            <column name="discount">10</column>
+            <column name="discount_type">%</column>
+            <column name="amount">900</column>
+            <column name="status">1</column>
+        </table>
+        <table name="order_line_items">
+            <column name="order_line_item_id">2</column>
+            <column name="order_id">1</column>
+            <column name="product_id">2</column>
+            <column name="unit_price">2200</column>
+            <column name="quantity">1</column>
+            <column name="discount">0</column>
+            <column name="discount_type">INR</column>
+            <column name="amount">2200</column>
+            <column name="status">1</column>
+        </table>
+        <table name="order_line_items">
+            <column name="order_line_item_id">3</column>
+            <column name="order_id">2</column>
+            <column name="product_id">3</column>
+            <column name="unit_price">2500</column>
+            <column name="quantity">2</column>
+            <column name="discount">0</column>
+            <column name="discount_type">INR</column>
+            <column name="amount">2500</column>
+            <column name="status">1</column>
+        </table>
+        <table name="order_line_items">
+            <column name="order_line_item_id">4</column>
+            <column name="order_id">3</column>
+            <column name="product_id">4</column>
+            <column name="unit_price">500</column>
+            <column name="quantity">3</column>
+            <column name="discount">0</column>
+            <column name="discount_type">INR</column>
+            <column name="amount">1500</column>
+            <column name="status">1</column>
+        </table>
+        <table name="order_line_items">
+            <column name="order_line_item_id">5</column>
+            <column name="order_id">3</column>
+            <column name="product_id">3</column>
+            <column name="unit_price">1000</column>
+            <column name="quantity">1</column>
+            <column name="discount">0</column>
+            <column name="discount_type">INR</column>
+            <column name="amount">1000</column>
+            <column name="status">1</column>
+        </table>
+    </database>
+</pma_xml_export>

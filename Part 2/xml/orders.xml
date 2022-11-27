@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.1.1
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Nov 27, 2022 at 01:56 AM
+- Server version: 10.4.22-MariaDB
+- PHP Version: 7.4.27
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="inflatable_innovative_toys" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="orders">
+                CREATE TABLE `orders` (
+                  `order_id` int(11) NOT NULL AUTO_INCREMENT,
+                  `order_no` int(11) NOT NULL,
+                  `customer_id` int(11) NOT NULL,
+                  `order_amount` float NOT NULL,
+                  `total_discount` float NOT NULL,
+                  `gst` float NOT NULL,
+                  `payable_amount` float NOT NULL,
+                  `order_date` datetime NOT NULL,
+                  `payment_status` varchar(255) NOT NULL,
+                  PRIMARY KEY (`order_id`),
+                  KEY `customer_id` (`customer_id`),
+                  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'inflatable_innovative_toys'
+    -->
+    <database name="inflatable_innovative_toys">
+        <!-- Table orders -->
+        <table name="orders">
+            <column name="order_id">1</column>
+            <column name="order_no">1</column>
+            <column name="customer_id">1</column>
+            <column name="order_amount">3200</column>
+            <column name="total_discount">100</column>
+            <column name="gst">14</column>
+            <column name="payable_amount">3534</column>
+            <column name="order_date">2022-11-09 19:51:54</column>
+            <column name="payment_status">Paid</column>
+        </table>
+        <table name="orders">
+            <column name="order_id">2</column>
+            <column name="order_no">2</column>
+            <column name="customer_id">2</column>
+            <column name="order_amount">5000</column>
+            <column name="total_discount">0</column>
+            <column name="gst">14</column>
+            <column name="payable_amount">5700</column>
+            <column name="order_date">2022-11-09 19:51:54</column>
+            <column name="payment_status">Paid</column>
+        </table>
+        <table name="orders">
+            <column name="order_id">3</column>
+            <column name="order_no">3</column>
+            <column name="customer_id">3</column>
+            <column name="order_amount">2500</column>
+            <column name="total_discount">0</column>
+            <column name="gst">14</column>
+            <column name="payable_amount">2850</column>
+            <column name="order_date">2022-11-09 20:02:57</column>
+            <column name="payment_status">Paid</column>
+        </table>
+    </database>
+</pma_xml_export>

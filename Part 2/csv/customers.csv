@@ -1,0 +1,4 @@
+"customer_id","customer_name","address","city","state","country","pincode","phone","email","website","status","created_date_time"
+"1","Venkat","Kukatpally","Hyderabad","TS","India","500072",,"venkat@jtnu.com","jntu.com","1","2022-11-10 00:21:48"
+"2","xyz","xyz address","xyz city","TS","INDIA","500068","9876543210","xyz@jntu.com","jntu.com","1","2022-11-10 00:21:48"
+"3","abc","abc address","Hyd","TS","India","500056","6598658455","abc@hyd.com","https://www.hyd.com","1","2022-11-10 00:32:51"
